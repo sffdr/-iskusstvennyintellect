@@ -1,0 +1,362 @@
+<html>
+<head> 
+<title> искуственный интеллект </title>
+</head>
+<body bgcolor = "#E6E6FA" text="#2F4F4F">
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+<img src = "готоваяшапка.jpg" align = "center" height="180" width = "100%" >
+
+<style>
+.grid * {
+    box-sizing: border-box;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 85% 60% 75% 85%;
+    column-gap: 30px;
+    row-gap: 20px;
+    padding: 10px 0;
+}
+/* Кол-во блоков на разных экранах */
+@media only screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 5fr 5fr 5fr;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: 5fr 5fr;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 5fr;
+    }
+}
+.grid-item {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+    transition: box-shadow .3s;
+    width: 100%;
+    height: 100%;  
+}
+.grid-item .image {
+    height: 200px;
+    overflow: hidden;
+}
+.grid-item .info {
+    position: relative;
+    height: calc(100% - 200px);
+    padding: 16px 14px 80px 14px;
+}
+.grid-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.grid-item .image img  {
+      transition: transform 280ms ease-in-out;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+.grid-item:hover .image img  {
+    transform: scale(1.1);
+}
+.info h2 {
+    font-family: 'Roboto', Тahoma, sans-serif;
+    color: #2F4F4F;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+.info-text p {
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Verdana, sans-serif; 
+    margin-bottom: 10px;
+}
+.info-text p:last-child {
+    margin-bottom: 0;
+}
+.grid-item .button-wrap {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    text-align: center;
+}
+
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.btn {
+  background-color: #708090;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  color: #F0F8FF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid rgb(47, 79, 79);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 20px 9px rgba(240, 248, 255, 1);
+  background: radial-gradient(at top, #D3D3D3, #708090)
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+   120deg,
+   transparent,
+   rgba(176, 196, 222, 1),
+   transparent
+  );
+  transition: all 600ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+</style>
+
+
+
+<style>
+ .border {
+  border: 3px solid #708090;
+  margin: 15px;
+ }
+</style>
+
+
+<style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.btn {
+  background-color: #708090;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  color: #F0F8FF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid rgb(47, 79, 79);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 20px 9px rgba(240, 248, 255, 1);
+  background: radial-gradient(at top, #D3D3D3, #708090)
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+   120deg,
+   transparent,
+   rgba(176, 196, 222, 1),
+   transparent
+  );
+  transition: all 600ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+</style>
+
+  <style>
+   p {  
+    font-family: system-ui;
+    color: #2F4F4F; 
+    text-indent: 5mm;
+    padding: 1.8mm;
+   }
+
+   H1 {  
+    font-family: system-ui;
+    color: #2F4F4F; 
+    padding: 1.3mm;
+   }
+
+   H2 {  
+    font-family: system-ui;
+    color: #2F4F4F; 
+    padding: 1.8mm;
+   }
+  </style>
+
+<center><table border = 0 px widht= "100%">
+
+<tr>
+<td valign="top" align="center">
+<tr>
+<td>
+<div class="container">
+<a href="ии.index.html" class="btn">главная</a>
+</div>
+<td>
+<div class="container">
+<a href="актуальность.html" class="btn">актуальность</a>
+</div>
+<td>
+<div class="container">
+<a href="типы.html" class="btn">типы</a>
+</div>
+<td>
+<div class="container">
+<a href="области.html" class="btn">области</a>
+</div>
+<td>
+<div class="container">
+<a href="применение.html" class="btn">сферы работы</a>
+</div>
+<td>
+<div class="container">
+<a href="эволюция.html" class="btn">эволюция</a>
+</div>
+<td>
+<div class="container">
+<a href="будущее.html" class="btn">будущее</a>
+</div>
+<td>
+<div class="container">
+<a href="новости.html" class="btn">новости</a>
+</div>
+<td>
+<div class="container">
+<a href="список.html" class="btn">источники</a>
+</div>
+<td>
+<a href=словарь.html><img src=словарик.png width=50 height=50 align=center>
+</td>
+</center></table>
+
+
+<table align="center">
+<body>
+<tr>
+<td width="240" valign="top" align="center">
+<p>
+<p>
+<P>
+<p>
+<P>
+<b>Связь с автором:</b>
+<p>
+<img src="QRкод.jpg" align="center" width="170" height="223" > 
+<P>  
+<p>
+<a href=https://t.me/AU2FT><img src=тг.png width=50 height=50 align="center">    
+<P>
+<p>
+<a href=https://wa.me/qr/MSZA4EKHFUEKF1><img src=вц.png width=50 height=50 align=center>
+<P>  
+<p>
+<a href="mailto:darinna.salikhhova@mail.ru"><img src=майлру.png width=50 height=50 align="center"> 
+</td>
+<td width="30">
+<td width="800" valign="top" align="left">
+<br>
+<P>
+Искусственный интеллект (ИИ) часто называют самой выдающиеся технологией нашей эпохи, обещающей улучшить нашу экономику, жизнь и возможности. В последнее десятилетие развитие ИИ действительно было очень успешным, особенно в области разработки новых методов обработки статистической информации и машинного обучения, которые позволяют работать с огромными массивами данных. Это уже повлияло практически на все сферы человеческой деятельности: алгоритмы ИИ сегодня используются всеми онлайн-платформами и в различных отраслях, от производства и здравоохранения до финансов и оптовой и розничной торговли.
+<p>
+<B>Интеллект</b> — это общая способность к познанию и решению трудностей, которая объединяет все познавательные способности человека: ощущение, восприятие, память, представление, мышление, воображение. 
+</p>
+<P>
+<b>Искусственный интеллект</b> — это система или машина, которая способна имитировать человеческое поведение для выполнения определенных задач и может постепенно обучаться, используя полученную информацию. 
+<img src="наглав.jpg" align="right" align="justify" width="170" height="170" class="border"> 
+<p>
+Его основная цель — это расширить границы человеческих способностей и возможностей, улучшить качество нашей жизни. 
+</p>
+<P>
+Его основные свойства — это понимание языка, обучение и способность мыслить и, что немаловажно, действовать. Тоесть воспроизведение навыков, присущих человеку.
+</p>
+<P>
+<b>Почему искусственный интеллект так важен?</b>
+<p>
+Сегодня объем данных намного опережает способность людей поглощать, обрабатывать и принимать сложные решения на основе этих данных.
+Главными плюсами технологий ИИ, по мнению экспертов, является выход на новые уровни производительности, автоматизации, эффективности, анализа, обучения, принятия решений, прогнозируемости, а также обучаемость.
+</p>
+</td>
+<td width="50">
+<td width="400" valign="top" align="left">
+<p>
+<p>
+<p>
+<p>
+<P>
+<b>Главные новости:</b>
+
+<section class="grid">
+    <article class="grid-item">
+        <div class="image">
+            <img src="горнов.jpg" />
+        </div>
+        <div class="info">
+            26 ноября 2023<h2>Цифровое будущее:</h2>
+            <div class="info-text">
+                <p>В России обновят стратегию развития искусственного интеллекта. Она станет частью нового нацпроекта «Экономика данных»...</p>
+            </div>
+<P>
+               <div class="container">
+                    <a href="новость1.html" class="btn">подробнее..»</a>
+               </div>
+        </div>
+    </article>
+</td>
+</tr>
+</table>
+<table align="center">
+<td> <P> © Салихова Дарина 2023-2024  </p>
+<script type="text/javascript">
+document.ondragstart = noselect; document.onselectstart = noselect;
+document.oncontextmenu = noselect; function noselect() {return false;}
+</script>
+</body>
+</td>
+</table>
+</html>
